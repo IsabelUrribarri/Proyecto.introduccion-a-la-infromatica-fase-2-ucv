@@ -1,0 +1,425 @@
+/* FONT */
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+/* RESTYLE TAG */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins-Regular', sans-serif;
+    background-image: url('images/bg-01.jpg'); /* Aquí está la imagen de fondo */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    background-image: url('images/bg-01.jpg'); /* Aquí está la imagen de fondo */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(9, 9, 9, 0.1);
+    border-color: #040404;
+}
+
+a {
+    font-family: 'Poppins-Regular';
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ffffff;
+    margin: 0;
+    transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #a64bf4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    font-family: 'Poppins-Regular';
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0;
+}
+
+ul, li {
+    margin: 0;
+    list-style-type: none;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #adadad;
+}
+
+/* Utility */
+.txt1 {
+    font-family: 'Poppins-Regular';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.txt2 {
+    font-family: 'Poppins-Regular';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.bg1 {
+    background-color: #3b5998;
+}
+
+.bg2 {
+    background-color: #1da1f2;
+}
+
+.bg3 {
+    background-color: #ea4335;
+}
+
+/* Login */
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-right {
+    margin-left: 8px;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrap-login100 {
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login100-form {
+    width: 100%;
+}
+
+.login100-form-title {
+    display: block;
+    font-family: 'Poppins-Bold';
+    font-size: 39px;
+    color: #000000;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Input */
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.label-input100 {
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.5;
+    padding-left: 7px;
+}
+
+.input100 {
+    font-family: 'Poppins-Medium';
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    padding-left: 8px;
+}
+
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input100::after {
+    font-family: 'Material-Design-Iconic-Font';
+    color: #adadad;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: calc(100% - 20px);
+    bottom: 0;
+    left: 0;
+    padding-left: 13px;
+    padding-top: 3px;
+}
+
+.focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #7f7f7f;
+    transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100::before {
+    width: 100%;
+}
+
+.has-val.input100 + .focus-input100::before {
+    width: 100%;
+}
+
+.input100:focus + .focus-input100::after {
+    color: #a64bf4;
+}
+
+.has-val.input100 + .focus-input100::after {
+    color: #a64bf4;
+}
+
+/* Button */
+.container-login100-form-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.login100-form-btn {
+    font-family: 'Poppins-Medium';
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    background: #a64bf4;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 30px 0 rgba(3, 216, 222, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s;
+    margin: 5%;
+}
+
+.login100-form-btn:hover {
+    background: #7f7f7f;
+}
+
+.login100-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    top: 0;
+    left: -100%;
+    transition: left 0.4s;
+}
+
+.login100-form-btn:hover .login100-form-bgbtn {
+    left: 0;
+}
+
+/* Styles for course pages */
+.course-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.course-item {
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #fefcff;
+    color: #000000;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.course-item:hover {
+    background-color: #7f7f7f;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    color: #fffbfb;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+}
+
+/* Button styles for quiz */
+.quiz-container .next-btn,
+.quiz-container .back-to-courses-btn {
+    font-family: 'Poppins-Medium';
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    background: #a64bf4; /* Purple color */
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 30px 0 rgba(3, 216, 222, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s, color 0.4s;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+/* Hover effect for quiz buttons */
+.quiz-container .next-btn:hover,
+.quiz-container .back-to-courses-btn:hover {
+    background: #7f7f7f; /* Darker gray color on hover */
+    color: #fff; /* Ensure text color stays white on hover */
+}
+
+/* Add focus effect if needed */
+.quiz-container .next-btn:focus,
+.quiz-container .back-to-courses-btn:focus {
+    outline: none; /* Remove default outline */
+}
+/* Estilos para el botón 'Volver a Cursos' */
+.button-container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 20px; /* Espacio encima del botón */
+}
+
+.back-to-courses-btn {
+    font-family: 'Poppins-Medium';
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    background: #a64bf4; /* Color del botón */
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 30px 0 rgba(3, 216, 222, 0.2);
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    transition: background 0.4s, color 0.4s;
+}
+
+.back-to-courses-btn:hover {
+    background: #7f7f7f; /* Color más oscuro al pasar el ratón */
+    color: #fff; /* Asegura que el texto sea blanco al pasar el ratón */
+}
+
+/* Estilos para el contador */
+.timer {
+    font-family: 'Poppins-Regular';
+    font-size: 20px;
+    color: #ffffff;
+    background: #33333300; /* Fondo del contador */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio inferior */
+}
