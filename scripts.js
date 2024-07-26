@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (currentQuestionIndex < quiz.questions.length) {
                         renderQuestion();
                     } else {
-                        // Final result screen
+
                         quizContainer.innerHTML = `
                             <div class="result">Tu puntuación es ${score}/${quiz.questions.length}</div>
                             <button class="back-to-courses-btn">Volver a Cursos</button>
