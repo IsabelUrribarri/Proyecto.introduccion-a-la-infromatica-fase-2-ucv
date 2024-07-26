@@ -5,14 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Evento de clic en el botón de login
     if (loginButton) {
         loginButton.addEventListener('click', function(e) {
-            e.preventDefault();  // Previene el comportamiento por defecto del botón
+            e.preventDefault();  
 
             // Redirección a la página de cursos
             window.location.href = "courses.html";
         });
     }
 
-    // Quiz functionality
     const quizzes = {
         python: {
             questions: [
@@ -137,11 +136,19 @@ document.addEventListener("DOMContentLoaded", function() {
                             <div class="result">Tu puntuación es ${score}/${quiz.questions.length}</div>
                             <button class="back-to-courses-btn">Volver a Cursos</button>
                         `;
-                        // Re-attach event listener to the "Back to Courses" button
                         const backToCoursesBtn = quizContainer.querySelector('.back-to-courses-btn');
                         backToCoursesBtn.addEventListener('click', function() {
                             window.location.href = "courses.html";
                         });
+
+ 
+                        clearInterval(timerInterval);
+
+                        const nextBtn = quizContainer.querySelector('.next-btn');
+                        if (nextBtn) {
+                            nextBtn.disabled = true;
+                        }
+                        countdownElement.style.display = 'none';
                     }
                 } else {
                     alert("Por favor selecciona una respuesta");
@@ -150,31 +157,40 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         renderQuestion();
+
+
+        const countdownElement = document.getElementById('countdown');
+        const redirectBtnContainer = document.getElementById('redirect-btn-container');
+        let time = 120; // 2 minutos en segundos
+
+        function updateTimer() {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+
+            countdownElement.textContent = 
+                `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            if (time <= 0) {
+                clearInterval(timerInterval);
+                alert('¡Se acabó el tiempo!');
+                // Deshabilitar el botón "Siguiente" y mostrar el botón "Volver a Cursos"
+                const nextBtn = quizContainer.querySelector('.next-btn');
+                if (nextBtn) {
+                    nextBtn.disabled = true;
+                }
+                redirectBtnContainer.innerHTML = `
+                    <a href="courses.html" class="back-to-courses-btn">Volver a Cursos</a>
+                `;
+
+                countdownElement.style.display = 'none';
+            } else {
+                time--;
+            }
+        }
+
+        // Actualiza el contador cada segundo
+        const timerInterval = setInterval(updateTimer, 1000);
     } else {
         quizContainer.innerHTML = '<div class="error">Curso no encontrado.</div>';
     }
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const countdownElement = document.getElementById('countdown');
-    let time = 60 * 2; // 5 minutos en segundos
-
-    function updateTimer() {
-        const minutes = Math.floor(time / 60);
-        const seconds = time % 60;
-
-        countdownElement.textContent = 
-            `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
-        if (time <= 0) {
-            clearInterval(timerInterval);
-            alert('¡Se acabó el tiempo!');
-            // Aquí puedes añadir lógica adicional cuando se acabe el tiempo
-        } else {
-            time--;
-        }
-    }
-
-    // Actualiza el contador cada segundo
-    const timerInterval = setInterval(updateTimer, 1000);
 });

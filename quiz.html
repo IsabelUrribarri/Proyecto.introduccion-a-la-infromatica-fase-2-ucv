@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Quiz - AlgoByte</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Quiz Interactivo</h1>
+        <h1>Quiz</h1>
     </header>
     <main>
         <div class="quiz-container">
-            <!-- Aquí se cargarán las preguntas del quiz mediante JavaScript -->
+            <!-- El contenido del quiz será insertado aquí por el script -->
         </div>
-        <div id="timer" class="timer">
-                Tiempo restante: <span id="countdown">00:00</span>
-            </div>
-        <!-- Contenedor para el botón de volver a cursos -->
-        <div id="redirect-btn-container" style="margin-top: 20px;"></div>
+        <!-- Temporizador -->
+        <div id="timer-container">
+            <p>Tiempo restante: <span id="countdown">02:00</span></p>
+        </div>
+        <!-- Contenedor para el botón de redirección -->
+        <div id="redirect-btn-container">
+            <!-- El botón "Volver a Cursos" será insertado aquí por el script cuando se agote el tiempo -->
+        </div>
     </main>
-    <script src="scripts.js"></script>
 </body>
 </html>
