@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/sello.ico" />
     <title>Quiz</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Quiz</h1>
+        <div class="header-logo">
+            <img src="images/sello.png" alt="Logo de la Academia">
+        </div>
     </header>
     <main>
         <div class="quiz-container">
@@ -17,12 +23,27 @@
         </div>
         <!-- Temporizador -->
         <div id="timer-container">
-            <p>Tiempo restante: <span id="countdown">02:00</span></p>
+            <p>Tiempo restante: <span id="countdown"></span></p>
         </div>
         <!-- Contenedor para el botón de redirección -->
         <div id="redirect-btn-container">
             <!-- El botón "Volver a Cursos" será insertado aquí por el script cuando se agote el tiempo -->
         </div>
+        <!-- Contenedor para el certificado -->
+        <div id="certificate-container" style="display:none;">
+            <h2>¡Felicidades!</h2>
+            <p>Has aprobado el quiz y aquí está tu certificado:</p>
+            <div id="certificate">
+                <h3>Certificado de Aprobación</h3>
+                <p>Este certificado se otorga a</p>
+                <p id="username">[Nombre del Usuario]</p>
+                <p>por completar exitosamente el quiz de</p>
+                <p id="course-name">[Nombre del Curso]</p>
+                <p>Fecha: <span id="certificate-date"></span></p>
+            </div>
+            <button id="download-certificate-btn">Descargar Certificado</button>
+        </div>
     </main>
 </body>
+
 </html>

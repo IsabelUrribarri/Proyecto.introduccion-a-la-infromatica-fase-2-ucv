@@ -1,21 +1,24 @@
-
+/* Reset global de márgenes, rellenos y box-sizing para asegurar consistencia en el diseño */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
+/* Estilo base para el body y html, incluyendo imagen de fondo y fuente principal */
+body,
+html {
     height: 100%;
-    font-family: 'Poppins-Regular', sans-serif;
-    background-image: url('images/bg-01.jpg'); 
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('images/bg-01.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+/* Estilo para el header, incluyendo imagen de fondo y sombra */
 header {
-    background-image: url('images/bg-01.jpg'); 
+    background-image: url('images/bg-01.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -27,17 +30,18 @@ header {
     border-color: #040404;
 }
 
+/* Logo en el header, alineado a la derecha */
 .header-logo {
     position: absolute;
     top: 0;
     right: 0;
-    width: 4%; 
+    width: 4%;
 
 }
 
 .header-logo img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     margin-top: 3px;
 }
 
@@ -45,8 +49,9 @@ header {
     color: #000000;
 }
 
+/* Estilos generales para enlaces */
 a {
-    font-family: 'Poppins-Regular';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.7;
     color: #fcfcfc;
@@ -63,41 +68,46 @@ a:hover {
     color: #a64bf4;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Estilo para los encabezados (h1, h2, etc.) y párrafos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
 p {
-    font-family: 'Poppins-Regular';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
     margin: 0;
 }
 
-ul, li {
-    margin: 0;
-    list-style-type: none;
-}
-
-input, textarea {
+/* Estilos para campos de entrada y textarea */
+input,
+textarea {
     outline: none;
     border: none;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #adadad;
 }
 
+/* Estilos para textos y fondos específicos */
 .txt1 {
-    font-family: 'Poppins-Regular';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #666666;
 }
 
 .txt2 {
-    font-family: 'Poppins-Regular';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #000000;
@@ -116,7 +126,7 @@ input::placeholder, textarea::placeholder {
     background-color: #ea4335;
 }
 
-
+/* Contenedor principal para el login, centrado en la página */
 .limiter {
     width: 100%;
     margin: 0 auto;
@@ -126,6 +136,7 @@ input::placeholder, textarea::placeholder {
     margin-left: 8px;
 }
 
+/* Estilo para el contenedor de login */
 .container-login100 {
     width: 100%;
     min-height: 100vh;
@@ -138,11 +149,13 @@ input::placeholder, textarea::placeholder {
     background-size: cover;
 }
 
+/* Estilo para campos de entrada dentro del login */
 input::placeholder {
-    color: #ffffff; 
-    opacity: 1; 
+    color: #ffffff;
+    opacity: 1;
 }
 
+/* Estilo para el contenedor del formulario de login */
 .wrap-login100 {
     width: 500px;
     background: #ffffff4f;
@@ -150,20 +163,22 @@ input::placeholder {
     overflow: hidden;
 }
 
+/* Estilo para el formulario de login */
 .login100-form {
     width: 100%;
 }
 
+/* Título del formulario de login */
 .login100-form-title {
     display: block;
-    font-family: 'Poppins-Bold';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 39px;
     color: #000000;
     line-height: 1.2;
     text-align: center;
 }
 
-
+/* Estilo para los campos de entrada dentro del formulario */
 .wrap-input100 {
     width: 100%;
     position: relative;
@@ -171,7 +186,7 @@ input::placeholder {
 }
 
 .label-input100 {
-    font-family: 'Poppins-Regular';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #000000;
     line-height: 1.5;
@@ -179,7 +194,7 @@ input::placeholder {
 }
 
 .input100 {
-    font-family: 'Poppins-Medium';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #000000;
     line-height: 1.2;
@@ -190,6 +205,7 @@ input::placeholder {
     padding-left: 8px;
 }
 
+/* Estilos para la animación de los campos de entrada */
 .focus-input100 {
     position: absolute;
     display: block;
@@ -201,7 +217,7 @@ input::placeholder {
 }
 
 .focus-input100::after {
-    font-family: 'Material-Design-Iconic-Font';
+    font-family: Arial, Helvetica, sans-serif;
     color: #adadad;
     font-size: 22px;
     display: flex;
@@ -227,30 +243,30 @@ input::placeholder {
     transition: all 0.4s;
 }
 
-.input100:focus + .focus-input100::before {
+.input100:focus+.focus-input100::before {
     width: 100%;
 }
 
-.has-val.input100 + .focus-input100::before {
+.has-val.input100+.focus-input100::before {
     width: 100%;
 }
 
-.input100:focus + .focus-input100::after {
+.input100:focus+.focus-input100::after {
     color: #a64bf4;
 }
 
-.has-val.input100 + .focus-input100::after {
+.has-val.input100+.focus-input100::after {
     color: #a64bf4;
 }
 
-
+/* Botón de envío del formulario de login */
 .container-login100-form-btn {
     display: flex;
     justify-content: center;
 }
 
 .login100-form-btn {
-    font-family: 'Poppins-Medium';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
@@ -275,6 +291,7 @@ input::placeholder {
     background: #7f7f7f;
 }
 
+/* Efecto de gradiente para el botón de login */
 .login100-form-bgbtn {
     position: absolute;
     z-index: -1;
@@ -290,7 +307,7 @@ input::placeholder {
     left: 0;
 }
 
-
+/* Estilos para la lista de cursos */
 .course-list {
     display: flex;
     flex-direction: column;
@@ -298,10 +315,11 @@ input::placeholder {
     margin-top: 20px;
 }
 
+/* Estilo para cada ítem de la lista de cursos */
 .course-item {
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin: 10px 0 40px 0;
+    margin-bottom: 20px;
     text-decoration: none;
     padding: 10px 20px;
     background-color: #ffffff4f;
@@ -315,21 +333,24 @@ input::placeholder {
     background-color: #7f7f7f;
 }
 
+/* Estilo para el contenido principal */
 main {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Estilo para subtítulos */
 h2 {
     font-family: 'Poppins-Bold', sans-serif;
     font-size: 24px;
     color: #000000;
-    margin-bottom: 10px;
+    margin: 20px 0px 20px 0px;
 }
 
+/* Estilo para párrafos dentro de los cursos */
 p {
-    font-family: 'Poppins-Regular', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #fffbfb;
     margin-bottom: 20px;
@@ -348,9 +369,10 @@ a {
     font-size: large;
 }
 
+/* Estilos para el área de quizzes */
 .quiz-container .next-btn,
 .quiz-container .back-to-courses-btn {
-    font-family: 'Poppins-Medium';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
@@ -367,29 +389,100 @@ a {
     position: relative;
     overflow: hidden;
     transition: background 0.4s, color 0.4s;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 
 .quiz-container .next-btn:hover,
 .quiz-container .back-to-courses-btn:hover {
-    background: #7f7f7f; 
+    background: #7f7f7f;
     color: #fff;
 }
 
 .quiz-container .next-btn:focus,
 .quiz-container .back-to-courses-btn:focus {
-    outline: none; 
+    outline: none;
 }
+
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.question {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Estilo para los botones de respuestas del quiz */
+.answer-button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+input[type="radio"]:checked::before,
+input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #a64bf4;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 .button-container {
     display: flex;
-    justify-content: flex-end; 
-    margin-top: 20px; 
+    justify-content: flex-end;
+    margin-top: 20px;
 }
 
 .back-to-courses-btn {
-    font-family: 'Poppins-Medium';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
@@ -399,26 +492,55 @@ a {
     align-items: center;
     padding: 0 20px;
     height: 50px;
-    background: #a64bf4; 
+    background: #a64bf4;
     border: none;
     border-radius: 25px;
     box-shadow: 0 5px 30px 0 rgba(3, 216, 222, 0.2);
-    text-decoration: none; 
+    text-decoration: none;
     transition: background 0.4s, color 0.4s;
 }
 
 .back-to-courses-btn:hover {
-    background: #7f7f7f; 
-    color: #fff; 
+    background: #7f7f7f;
+    color: #fff;
 }
 
+/* Estilo para el contador */
 #timer-container {
-    font-family: 'Poppins-Regular';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #ffffff;
-    background: #33333300; 
+    background: #33333300;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+}
+
+/* Estilo para el área de certificados */
+#certificate-date {
+    font-weight: bold;
+}
+
+#download-certificate-btn,
+.show-certificate-btn {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 15px;
+    height: 50px;
+    background: #a64bf4;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 30px 0 rgba(3, 216, 222, 0.2);
+    text-decoration: none;
+    transition: background 0.4s, color 0.4s;
+
 }
